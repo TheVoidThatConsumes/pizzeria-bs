@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <title>Pizzeria BS</title>
+</head>
+
+<header class="bg-[url('/img/hero.jpg')] w-full h-96 lg:h-screen bg-cover bg-center">
+
+                    <!--Background Opacity-->
+    <div class=" absolute inset-0 bg-black opacity-50 h-96 lg:h-screen flex flex-col">
+
+                     <!--NavBar-->
+        <nav class="px-4 sm:px-6 py-2.5">
+
+                        <!--Icon (Hidden)-->
+            <div class="container flex justify-between items-center mx-auto mt-2">
+                <h1 class="font-heading text-3xl md:text-2xl">Pizzeria BS</h1>
+                
+                <a href="javascript:void(0)" onclick="openMenu()">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-12 text-white font-extrabold md:hidden" href="google.com">
+                                <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                            </svg>  
+                        </button>                    
+                </a>
+
+                        <!--Nav List-->
+                <div class="hidden w-full md:block md:w-auto">
+                    <ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 gap-2 md:text-sm text-white">
+                        <li>
+                            <a href="/" class="block border-none py-2 pr-4 pl-3 md:p-0 font-body uppercase hover:scale-125 hover:duration-300">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#about" class="block py-2 pr-4 pl-3 md:p-0 font-body uppercase hover:scale-125 hover:duration-300">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="#gallery" class="block py-2 pr-4 pl-3 md:p-0 font-body uppercase hover:scale-125 hover:duration-300">Gallery</a>
+                        </li>
+
+                        <li>
+                            <a href="#services" class="block py-2 pr-4 pl-3 md:p-0 font-body uppercase hover:scale-125 hover:duration-300">Our Services</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="block py-2 pr-4 pl-3 md:p-0 font-body uppercase hover:scale-125 hover:duration-300">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+                        <!--Nav List (Hidden)-->
+    <div id="menu" class="fixed z-90 w-0 h-0 flex justify-center items-center bg-gray-600 opacity-0 duration-700">
+        <a href="javascript:void(0)" class="fixed top-6 right-12 text-white hover:text-orange-500 text-5xl font-semibold duration-300" onclick="closeMenu()">&times;</a>
+        <div class="flex flex-col text-white text-center text-xl font-medium space-y-4">
+            <img src="/img/pizza-svgrepo-com.svg" alt="" class="w-12 h-12 animate-bounce ml-6">
+            <a class="hover:text-orange-500 duration-300" href="/">Home</a>
+            <a class="hover:text-orange-500 duration-300" href="#about">About Us</a>
+            <a class="hover:text-orange-500 duration-300" href="#gallery">Gallery</a>
+            <a class="hover:text-orange-500 duration-300" href="#services">Services</a>
+            <a class="hover:text-orange-500 duration-300" href="#contact">Contact Us</a>
+            <img src="/img/pizza-svgrepo-com.svg" alt="" class="w-12 h-12 animate-bounce ml-6">
+        </div>
+        <script src="src/mobileMenu.js"></script>
+    </div>
+    
+</header>
+
+<body>
+                        <!--About Us-->
+    <section id="about" class="py-0">
+        <div class="flex flex-col lg:flex-row">
+            <div class="space-y-4 mx-6 my-7 lg:mt-14 lg:w-1/2">
+                <h2 class="font-fancy font-bold text-5xl text-center"><span class="text-red-500">About</span> Us</h2>
+                <blockquote class="italic font-medium text-center">&ldquo;Anyone who says money can't buy happiness has clearly never spent their money on pizza.&rdquo;</blockquote>
+                <p class="italic text-right mr-12">- Andrew W.K.</p>
+                <p class="block mt-6 font-body md:text-xl md:space-y-3 text-neutral-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br>
+                    Tellus integer feugiat scelerisque varius. Id ornare arcu odio ut. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero.
+                </p>
+            </div>
+            <div class="lg:w-1/2">
+                <img src="img/pizzashare.jpg" class="h-full" alt="">
+            </div>
+        </div>
+    </section>
+
+                        <!--Gallery-->
+    <section id="gallery" class="bg-black -mt-6 lg:-mt-12">
+        <div class= space-y-4 pt-8">
+          <div class="mt-6 lg:mt-12 mb-10 lg:mb-12 lg:mx-72">
+            <h2 class="font-fancy font-bold text-5xl text-center pt-10 lg:mt-12 text-red-500">Galleria</h2>
+            <p class="block font-body text-center mt-4 mx-6 text-neutral-400">Quam adipiscing vitae proin sagittis nisl rhoncus mattis. Urna condimentum mattis pellentesque id nibh tortor. Vulputate eu scelerisque felis imperdiet proin fermentum leo.</p>
+          </div>  
+            <!--Swiper JS-->
+            <div class="swiper h-1/2 py-4">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/Slide1.jpg" class="object-center object-fill w-full h-full" alt=""></div>
+                <div class="swiper-slide"><img src="img/Slide2.jpg" class="object-center object-cover w-full h-full" alt=""></div>
+                <div class="swiper-slide"><img src="img/Slide3.jpg" class="object-center object-cover w-full h-full" alt=""></div>
+                <div class="swiper-slide"><img src="img/Slide4.jpg" class="object-center object-cover w-full h-full" alt=""></div>
+                <div class="swiper-slide"><img src="img/Slide5.jpg" class="object-center object-cover w-full h-full" alt=""></div>
+                <div class="swiper-slide"><img src="img/Slide6.jpg" class="object-center object-cover w-full h-full" alt=""></div>
+                ...
+              </div>
+              <!-- Scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>    
+            
+        </div>
+    </section>
+
+                      <!--Services-->
+    <section id="services">
+      <div>
+        <div class="space-y-4 pt-8">
+          <h2 class="font-fancy font-bold text-5xl text-center mt-2"><span class="text-red-500">Our</span> Services</h2>
+          <p class="block font-body text-center mx-8 md:mx-24">Aliquet eget sit amet tellus cras adipiscing enim. Nec ultrices dui sapien eget mi proin sed libero enim.<br> Scelerisque fermentum dui faucibus in ornare quam.</p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row mx-8 p-6 md:p-8 lg:mt-6 items-center">
+
+                <!--Services Icons-->
+          <div class="flex flex-col items-center mt-2 mb-8 p-8">
+            <img src="img/eat in.svg" class="w-32 h-32 p-2" alt="">
+            <span class="block text-center text-neutral-600">
+              <h3 class="font-headingAlt text-xl font-semibold mt-4">In-House Dining</h3>
+              <p class="font-body mx-6 md:mx-18 lg:mx-4 mt-2">Tempor nec feugiat nisl pretium fusce id velit ut tortor. Nec tincidunt praesent semper.</p>
+            </span>
+          </div> 
+
+          <div class="flex flex-col items-center mt-2 mb-8 p-8">
+            <img src="img/takeout.svg" class="w-32 h-32 p-2" alt="">
+            <span class="block text-center text-neutral-600">
+              <h3 class="font-headingAlt text-xl font-semibold mt-4">Take-Out Option</h3>
+              <p class="font-body mx-6 md:mx-18 lg:mx-4 mt-2">Tempor nec feugiat nisl pretium fusce id velit ut tortor. Nec tincidunt praesent semper.</p>
+            </span>
+          </div> 
+
+          <div class="flex flex-col items-center mt-2 mb-8 p-8">
+            <img src="img/delivery.svg" class="w-32 h-32 p-2" alt="">
+            <span class="block text-center text-neutral-600">
+              <h3 class="font-headingAlt text-xl font-semibold mt-4">Home Delivery</h3>
+              <p class="font-body mx-6 md:mx-18 lg:mx-4 mt-2">Tempor nec feugiat nisl pretium fusce id velit ut tortor. Nec tincidunt praesent semper.</p>
+            </span>
+          </div> 
+
+          <div class="flex flex-col items-center mt-2 mb-8">
+            <img src="img/custom order.svg" class="w-32 h-32 p-2" alt="">
+            <span class="block text-center text-neutral-600">
+              <h3 class="font-headingAlt text-xl font-semibold mt-4">Customized Order</h3>
+              <p class="font-body mx-6 md:mx-18 lg:mx-4 mt-2">Tempor nec feugiat nisl pretium fusce id velit ut tortor. Nec tincidunt praesent semper.</p>
+            </span>
+          </div> 
+        </div>
+      </div>
+    </section>
+
+                      <!--Quick trial at embedding a map in the site. Creme de la Creme lmao-->
+    <section class="bg-black mt-2">
+      <div>
+          <div class="text-center p-4">
+            <h2 class="font-fancy font-bold text-5xl text-center mt-6 text-white">Pizzeria <span class="text-red-500">Near You</span></h2>
+            <p class="mx-10 py-6 text-neutral-400">Magna ac placerat vestibulum lectus mauris ultrices eros. Non arcu risus quis varius quam quisque id. Tincidunt augue interdum velit euismod in pellentesque massa.</p>
+          </div>
+          <div class="w-full h-80 items-center inline-block overflow-hidden">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1POfemRtwy21A1Gdy4LNlXT3xK6m7ocI&ehbc=2E312F" class="w-full relative -top-11 h-96"></iframe>
+          </div>
+      </div>
+    </section>
+
+                      <!--Contact Section-->
+    <section class="bg-black">
+      <div class="flex flex-col-reverse md:flex-row md:mx-2">
+                        <!--Web Header-->
+        <div class="md:w-1/4 py-20 md:py-40">
+          <h3 class="font-heading text-4xl text-center">Pizzeria BS</h3>
+          <span class="flex flex-wrap flex-row justify-center gap-12 mt-6">
+            <img src="img/fb.svg" alt="" class="w-6 h-6 cursor-pointer hover:scale-125 hover:duration-700">
+            <img src="img/twt.svg" alt="" class="w-6 h-6 cursor-pointer hover:scale-125 hover:duration-700">
+            <img src="img/ig.svg" alt="" class="w-6 h-6 cursor-pointer hover:scale-125 hover:duration-700">
+            <img src="img/g+.svg" alt="" class="w-8 h-8 pb-2 cursor-pointer hover:scale-125 hover:duration-700">
+            <img src="img/ue.svg" alt="" class="w-6 h-6 cursor-pointer hover:scale-125 hover:duration-700">
+          </span>
+        </div>
+
+
+
+                        <!--Contact Us-->
+        <div id="contact" class="md:w-2/4">
+          <div class="border rounded-sm bg-white shadow-white shadow-sm m-8 p-10">
+            <h3 class="font-fancy font-bold text-5xl mb-6 text-center"><span class="text-red-500">Contact</span> Us</h3>
+            <form action="/" class="font-body space-y-4">
+              <div class="space-y-2">
+                <label for="email" class="block">Your Email:</label>
+                <input type="email" id="email" class="p-2 w-1/2 border border-b-neutral-400 border-t-0 border-l-0 border-r-0 rounded" placeholder="void@anansi.com">
+              </div>
+
+              <div class="space-y-2">
+                <label for="Subject" class="block">Subject:</label>
+                <input type="text" id="Subject" class="p-2 w-1/2 border border-b-neutral-400 border-t-0 border-l-0 border-r-0 rounded" placeholder="How can we help you?">
+              </div>
+
+              <div class="space-y-2">
+                <label for="message" class="block">Your Message:</label>
+                <textarea id="message" rows="6" class="p-2 w-full border border-neutral-400 rounded" placeholder="Leave a Comment..."></textarea>
+              </div>
+
+              <div class="inline-flex mt-4">
+                <input type="checkbox" name="subscribe" id="subscribe" class="w-6 h-6 mt-1 md:mt-2 lg:mt-0 mr-2">
+                <p class="block font-medium">Yes, I would like to subscribe to a monthly newsletter about the best pizza deals in town!</p>
+              </div>
+
+              <button type="submit" class="flex mx-auto p-2 text-center bg-white hover:bg-orange-500 border my-10 rounded-md text-neutral-700 hover:text-white shadow-gray-400 shadow-md hover:shadow-2xl border-orange-500 hover:border-none hover:duration-500 hover:scale-110">Send Message</button>
+
+            </form>
+          </div>
+        </div>
+
+                      <!--Find Us-->
+        <div class="md:w-1/4 py-28 md:py-32 text-neutral-200">
+          <h4 class="text-xl md:hidden font-headingAlt text-center pb-8">Not Satisfied? Reach Out to Us Directly!</h4>
+            <div class="flex md:flex-col justify-evenly pt-4 space-y-4 font-body">
+              <div class="flex mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 md:w-7 hover:scale-125 hover:duration-500 md:h-7 mr-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                
+                <span class="hidden md:block">229, Via San Polo, <br>Brescia(BS), Italy. <br>25134</span>
+              </div>
+              <div class="flex mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 md:w-7 hover:scale-125 hover:duration-500 md:h-9 mr-2 md:pt-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                </svg>
+                
+                <span class="hidden md:block">Phone:(350) 234 5678 <br> Fax:(351) 987 6543</span>
+              </div>
+              <div class="flex mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 md:w-7 hover:scale-125 hover:duration-500 md:h-7 mr-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+                
+                <span class="hidden md:block">support@anansi.web</span>
+              </div>
+            </div>
+
+            <span class="block text-center md:hidden text-neutral-400 mt-16 pt-4">or</span>
+        </div>
+      </div>
+    </section>
+    
+</body>
+
+<footer class=" text-neutral-800 text-center bg-black">
+  <hr class=" bg-gray-400 w-3/4 mx-auto h-px mb-2 border-0">
+  <p class="pb-2 text-neutral-300 font-normal text-sm">Made with <span class="text-red-500 text-base">&hearts;</span> by <span class="hover:text-orange-500 duration-100 hover:animate-pulse cursor-pointer"><a href="https://twitter.com/D_voiid">Anansi.html&trade;</a></span>, 2022.</p>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+var menu = document.getElementById("menu");
+
+    //Open Menu
+    function openMenu(){
+        menu.classList.remove("w-0", "h-0", "opacity-0");
+        menu.classList.add("w-screen", "h-screen", "opacity-95");
+    }
+
+    //Close menu
+    function closeMenu(){
+        menu.classList.remove("w-screen", "h-screen", "opacity-95");
+        menu.classList.add("w-0", "h-0", "opacity-0");
+    }
+</script>
+
+<script>
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop:true,
+  spaceBetween:100,
+  autoplay:{
+    delay:5000,
+  },
+  speed:2000,
+
+  // Scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
+
+</html>
